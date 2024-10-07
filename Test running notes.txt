@@ -1,0 +1,83 @@
+https://rahulshettyacademy.com/client
+srtestautomation5@gmail.com
+Pass@123
+
+1) use 'npx playwright test' command to run the tests inside the tests folder
+
+2) Tests inside the Tests folder run parallelly, where the test cases inside each test spec.js file will run sequentially.
+
+3) need to follow a naming convention of spec.js or test.js in playwright for the test files for the Playwright to identify
+
+some important commands
+
+# Runs the end-to-end test
+ npx playwright test
+
+# Runs the tests only on Desktop Chrome
+ npx playwright test --project=chromium
+
+# Runs the tests of a specific file
+npx playwright test tests/example.spec.js
+
+# Runs the test in debug mode
+npx playwright test --debug
+
+# Runs the test in Headed mode
+npx playwright test --headed
+
+3)test.only is the property to run only one test in a test file which is having more tests
+
+4) Locating elements
+Locate by role
+Locate by label
+Locate by placeholder
+Locate by text
+Locate by alt text
+Locate by title
+Locate by test id
+Locate by CSS or XPath
+
+5) some quick ways to select CSS 
+# if Id is present
+ css -> tagname# id or #id
+
+# if class attribute is present
+ css - > tagname.class (or) .class
+
+# write css based on any attribute
+css -> [attribute ='value'] eg. [style='blocked']
+
+# write css with traversing from parent to child
+css -> parenttagname >> childtagname
+
+# if needs to write the locator based on text
+text=''
+
+.im-para.red
+//p[@class='im-para red']
+
+
+
+Important action methods
+title()
+fill(“”)
+click()
+textContent() - to get the Text content on the webpage
+allTextContents() - gets all the text on the locator page
+selectOption() - to select the value from the dropdown
+isChecked() - to get a boolean value for, whether the radio button is checked or not
+unCheck() - to uncheck a check box
+inputValue()
+
+Important Assertion methods
+toHaveTitle()
+toContainText() - to validate the given text content with the one in the Website
+toBeChecked() - to confirm whether the radio button is checked
+toBeChecked().toBeFalsy() - this is used to validate that the check box is not checked.
+toBeChecked().toBeTruthy() - this is used in the validation of the check box is checked
+
+
+To get the Test results for all the tests on the test results folder try to run the following command
+npx playwright test tests/yourfilename.spec.js --config playwright.config.js
+
+https://rahulshettyacademy.com/AutomationPractice/

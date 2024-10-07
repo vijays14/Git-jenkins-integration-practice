@@ -1,0 +1,20 @@
+{
+  "name": "playwrightautoproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "smoketest" :"npx playwright test --grep @smoke",
+    "regressionsuite":"npx playwright test --reporter=allure-playwright",
+    "smoketestreport": "npx playwright test --grep @smoke --reporter=allure-playwright"
+
+  },
+  "keywords": [],
+  "author": "SudhaVijayakumar",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.3",
+    "@types/node": "^20.14.12",
+    "allure-playwright": "^3.0.3"
+  }
+}
